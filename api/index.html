@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>Books Rankinig API</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Books Ranking API Documentation</h1>
+        <p class="lead">
+          This is A Simple API Documentation for amazon Books Ranking.
+        </p>
+        <hr class="my-4">
+        <p>
+          provided requests: GET / POST  .<br>
+          The result will return in JSON File.<br>
+          if the URL is not found you will get Json response url undefined.<br>
+          in case of an query error response will be with query error.
+        </p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Github</a>
+      </div>
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          GET : books
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              [<br>
+              {<br>
+                author: {<br>
+                  name: "joanne rowling",<br>
+                  age: 52,<br>
+                  nationality: "british",<br>
+                  rank: 9.5<br>
+                },<br>
+                _id: "5b063e6c60b4260b61999341",<br>
+                name: "harry potter",<br>
+                rank: 9<br>
+              },<br>
+              {<br>
+                author: {<br>
+                  name: "suzanne collins",<br>
+                  age: 55,<br>
+                  nationality: "american",<br>
+                  rank: 7<br>
+                },<br>
+                _id: "5b06fd5f60b4264842e91698",<br>
+                name: "the hunger game",<br>
+                rank: 8<br>
+              }<br>
+              ...<br>
+            ]
+            </p>
+            <footer class="blockquote-footer"></footer>
+          </blockquote>
+        </div>
+      </div>
+
+
+
+      <div class="card mt-3">
+        <div class="card-header">
+          POST : bookByRank<br>
+          <span>parameter: rank</span><br>
+          <span>book rank parameter is number must be under, equal 10</span>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <span>example with rank:9</span>
+            <p>
+              {<br>
+                author: {<br>
+                  name: "joanne rowling",<br>
+                  age: 52,<br>
+                  nationality: "british",<br>
+                  rank: 9.5<br>
+                },<br>
+                _id: "5b063e6c60b4260b61999341",<br>
+                name: "harry potter",<br>
+                rank: 9<br>
+              }
+            </p>
+            <footer class="blockquote-footer"></footer>
+          </blockquote>
+        </div>
+      </div>
+
+
+
+      <div class="card mt-3">
+        <div class="card-header">
+          POST : bookRankAuthor<br>
+          <span>parameters: rank, author_rank</span><br>
+          <span>book rank + author rank parameter is number must be under, equal 10</span>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <span>example with rank:9 & author_rank:9.5</span>
+            <p>
+              {<br>
+                author: {<br>
+                  name: "joanne rowling",<br>
+                  age: 52,<br>
+                  nationality: "british",<br>
+                  rank: 9.5<br>
+                },<br>
+                _id: "5b063e6c60b4260b61999341",<br>
+                name: "harry potter",<br>
+                rank: 9<br>
+              }
+            </p>
+            <footer class="blockquote-footer"></footer>
+          </blockquote>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
