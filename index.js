@@ -8,6 +8,7 @@ const express    = require('express'),
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('./api', express.static('api'));
 
 app.get('/',(req,res)=>{
   res.json({API:dsfsdfsdf});
