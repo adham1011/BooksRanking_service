@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/Documentation', express.static('api'));
 
 app.get('/',(req,res)=>{
-  res.json({API:dsfsdfsdf});
+  res.json({API:'https://books-ranking.herokuapp.com/Documentation/'});
 });
 app.get('/books/',books.listBooks);/*getting the list of all books*/
 app.post('/bookByRank',books.bookByRank); /*getting the list by Book rank*/
